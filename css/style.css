@@ -53,6 +53,29 @@ a:hover {
     padding: 0;
     width: 100%;
 }
+
+.texto_mi_resumen{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.0;
+    white-space: pre;
+    background-image: url("../imagenes_blog/estrellas.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+.desc_mi_resumen{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    white-space: pre-line;
+}
 .lista-desplegable{
     position: relative;
 }
