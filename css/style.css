@@ -47,7 +47,7 @@ a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 27%;
+    top: 25%;
     min-height: 150px;
     margin: 0;
     padding: 0;
@@ -60,11 +60,15 @@ a:hover {
 .lista-desplegable-contenido{
     display: none;
     position: absolute;
-    padding: 10px;
+    padding: 5px;
     z-index: 1000;
     background-color: #333030;
-    min-width: 130px;
+    min-width: 100px;
     line-height: 1.8;
+}
+
+.lista-desplegable-contenido a:last-child{
+    white-space: nowrap;
 }
 .lista-desplegable:hover .lista-desplegable-contenido{
     display: block;
