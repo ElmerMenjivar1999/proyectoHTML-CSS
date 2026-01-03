@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #333030;
@@ -20,16 +25,17 @@ a:hover {
 }
 
 .menu {
-    padding: 5px;
+    padding: 25px;
     margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+
 }
 
 .contenedor_texto {
-    position: absolute;
-    width: 100vw;
-    height: 13vw;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
     display: flex;
     min-height: 150px;
     flex-direction: column;
@@ -40,15 +46,13 @@ a:hover {
     background-position: center;
     line-height: 1.2;
     margin: 0;
-    padding: 0;
-    width: 100%;
+    padding: 20px 0;
     z-index: 10;
 }
 .contenedor_img{
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 25%;
     min-height: 150px;
     margin: 0;
     padding: 0;
@@ -56,9 +60,8 @@ a:hover {
 }
 
 .texto_mi_resumen{
-    position: absolute;
     width: 100%;
-    height: 700px;
+    height: auto;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -69,13 +72,22 @@ a:hover {
     background-image: url("../imagenes_blog/estrellas.avif");
     background-size: cover;
     background-position: center;
+    padding: 40px 20px;
 }
 
-.desc_mi_resumen{
+.desc_mi_resumen1{
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: normal;
     white-space: pre-line;
+    line-height: 1.6;
+}
+.desc_mi_resumen2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    white-space: pre-line;
+    padding: 30px;
 }
 
 .contenedor{
@@ -91,6 +103,7 @@ a:hover {
     gap: 1px;
     max-width: 1100px; 
     margin: 0 auto;
+    padding: 40px;
 }
 
 .item{
@@ -118,15 +131,14 @@ a:hover {
     text-align: center;
 }
 .noticias{
-    position: absolute;
     width: 100%;
-    height: 1800px;
-    bottom: -245%;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-image: url("../imagenes_blog/estrellas.avif");
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 .tarjeta{
     width: 650px;
@@ -272,7 +284,7 @@ a:hover {
 
 .contenedor-sobre-mi{
     position: absolute;
-    top: 70px;
+    top: 120px;
     right: 100px;
     display: flex;
     flex-direction: column;
@@ -282,7 +294,8 @@ a:hover {
     background-size: cover;
     background-position: center;
     background: rgba(61, 59, 58, 0.95);
-    margin: 20px auto;
+    margin: 20px 70px 20px auto; /* Margen derecho de 100px */
+    padding: 0;
 }
 .titulo-sobre-mi{
     text-align: left;
@@ -310,8 +323,68 @@ a:hover {
     display: block;
 }
 
+.anuncios-noticias{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../imagenes_blog/estrellas_oscuras.avif");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+.anuncios-noticias h1{
+    margin-top: 80px;
+}
+.anuncios-noticias h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    width: 38%;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.formulario{
+    position: relative;
+    z-index: 1000;
+    align-items: center;
+    padding: 45px ;
+}
+.formulario h3{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.formulario form{
+    text-align: center;
+}
+
+.formulario input{
+    padding: 8px;
+}
+
+.formulario button{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: #e35f50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px 220px;
+    margin: 10px;
+    font-size: 18px;
+}
 .lista-desplegable{
     position: relative;
+    
 }
 
 .lista-desplegable-contenido{
