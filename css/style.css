@@ -8,8 +8,6 @@ body {
     background-color: #333030;
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
 }
 a {
     margin-left: 20px;
@@ -157,7 +155,6 @@ a:hover {
     width: 650px;
     height: 380px;
     background-color: white ;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     margin: 20px auto;
@@ -306,7 +303,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     background: rgba(61, 59, 58, 0.95);
-    margin: 20px 70px 20px auto; /* Margen derecho de 100px */
+    margin: 20px 70px 20px auto; 
     padding: 0;
 }
 .titulo-sobre-mi{
