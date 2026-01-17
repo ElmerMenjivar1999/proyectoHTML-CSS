@@ -40,7 +40,45 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.lista-desplegable{
+    position: relative;
+    
+}
 
+.lista-desplegable-contenido{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    z-index: 1000;
+    background-color: #333030;
+    min-width: 100px;
+    line-height: 1.8;
+}
+
+.lista-desplegable-contenido a:last-child{
+    white-space: nowrap;
+}
+.lista-desplegable:hover .lista-desplegable-contenido{
+    display: block;
+}
+
+.redes-sociales{
+    display: flex;
+    gap: 15px; 
+    margin-left: auto; 
+    align-items: center;
+}
+
+.redes-sociales img{
+    display: inline-block;
+    width: 30px;
+    margin-left: 10px;
+}
+
+.redes-sociales a {
+    padding: 0;
+    margin: 0;
 }
 
 .contenedor_texto {
@@ -396,46 +434,6 @@ a:hover {
     padding: 5px 220px;
     margin: 10px;
     font-size: 18px;
-}
-
-.redes-sociales{
-    display: flex;
-    gap: 15px; 
-    margin-left: auto; 
-    align-items: center;
-}
-
-.redes-sociales img{
-    display: inline-block;
-    width: 30px;
-    margin-left: 10px;
-}
-
-.redes-sociales a {
-    padding: 0;
-    margin: 0;
-}
-
-.lista-desplegable{
-    position: relative;
-    
-}
-
-.lista-desplegable-contenido{
-    display: none;
-    position: absolute;
-    padding: 5px;
-    z-index: 1000;
-    background-color: #333030;
-    min-width: 100px;
-    line-height: 1.8;
-}
-
-.lista-desplegable-contenido a:last-child{
-    white-space: nowrap;
-}
-.lista-desplegable:hover .lista-desplegable-contenido{
-    display: block;
 }
 
 #inicio {
