@@ -32,7 +32,20 @@
 				</div>
 			</nav>
 		</header>
-		
+		<!-- Sección de Datos Curiosos -->
+		<section id="curiosidades-espaciales" style="text-align: center; 
+		padding: 20px; background: rgba(0, 0, 0, 0.7); 
+		color: white; border-radius: 15px; margin: 20px;">
+		<div id="usuario-container" style="display: none; text-align: right; padding: 10px; color: white;">
+			<span id="nombre-display"></span>  | 
+			<a href="#" id="btn-salir" style="color: #ff4d4d; text-decoration: none; font-weight: bold;">Salir</a>
+		</div>
+			<h2>Curiosidades del Cosmos</h2>
+			<p id="texto-curioso" style="font-size: 1.2em; min-height: 50px;">
+				¿Sabías que el universo esconde secretos increíbles? Haz clic abajo para descubrir uno.
+			</p>
+			<button onclick="mostrarDato()" id="btn-dato">Explorar el Universo</button>
+		</section>
 		<section id="inicio_blog">
     		<div class="contenedor_texto">
                 <h3 id="subtexto1">BLOG SOBRE EL UNIVERSO</h3>
@@ -214,12 +227,14 @@
 			<div class="formulario">
 				<h3>SUSCRÍBETE PARA VER MAS NOTICIAS</h3>
 				<form>
-					<input type="text" placeholder="Ingresa tu email aquí" size="80"></input>
+					<input type="email" id="email-usuario" placeholder="Ingresa tu email aquí" size="80"></input>
 					<br>
-				<button type="submit">UNIRSE</button>
+				<button id="btn-suscribir" type="submit">UNIRSE</button>
+				<p id="mensaje-correo" style="margin-top: 10px; font-weight: bold;"></p>
 			</form>
 			</div>
 		</section>
+		<script src="script/main.js"></script>
 	</body>
 
 </html>
