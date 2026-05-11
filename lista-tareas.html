@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleListTask.css">
+    <title>Página - Lista de Tareas</title>
+</head>
+<body>
+    <header>
+			<div class="menu-background"></div>
+			<nav class="menu">
+				<ul id="listas">
+					<li><a href="blog.html" id="inicio">Inicio</a></li>
+					<div class="lista-desplegable">
+					    Contactarme
+    					<div class="lista-desplegable-contenido">
+                            <a href="https://www.instagram.com/elmer.menjivar.31/">Instagram</a>
+                            <a href="https://www.facebook.com/elmer.menjivar.31">Facebook</a>
+                            <a href="tel:+34625520358">+34 625 52 03 58</a>
+    					</div>
+					</div>
+					<li><a href="lista-tareas.html" >Lista de tareas</a></li>
+				</ul>
+				<div class="redes-sociales">
+					<a href="https://www.facebook.com/elmer.menjivar.31"><img src="imagenes_blog/facebook.png" alt="icono-facebook"></a>
+					<a href="https://www.instagram.com/elmer.menjivar.31/"><img src="imagenes_blog/instagram.png" alt="icono-instagram"></a>
+				</div>
+			</nav>
+		</header>
+    <h1>Lista de tareas</h1>
+    <div class="main-append-list">
+        <button class="append-list">Añadir tarea</button>
+    </div>
+    
+    <div id="contenedor-input" style="display: none;">
+        <input type="text" id="nueva-tarea" placeholder="Escribe tu tarea...">
+        <button id="btn-guardar">Guardar</button>
+    </div>
+
+    <ul id="lista-tareas"></ul>
+
+    <script src="script/taskList.js"></script>
+</body>
+</html>
