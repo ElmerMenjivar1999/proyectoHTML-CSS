@@ -168,12 +168,12 @@ a:hover {
     border-color: #2196f3; /* Cambia a azul al escribir */
 }
 
-/* El botón de guardar que acompaña al input */
+/* botón de guardar */
 #btn-guardar {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50; /* Verde para indicar "acción positiva" */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     border-radius: 10px;
