@@ -16,7 +16,6 @@ window.onload = function() {
         }
     }
 
-
     if (nombre) {
         display.innerText = nombre;
         contenedor.style.display = "block"; // Mostramos la barrita "Nombre | Salir"
@@ -26,13 +25,50 @@ window.onload = function() {
     btnSalir.addEventListener('click', function(e) {
         e.preventDefault();
         
-        localStorage.removeItem('nombreAstronauta'); // Borramos el dato específico
+        localStorage.removeItem('nombreAstronauta');
 
         
         alert("Cerrando bitácora...");
         location.reload();
     });
 };
+
+const imagenes = document.querySelectorAll('.class-imagen-tema');
+
+document.addEventListener('mousemove', () => {
+
+    imagenes.forEach((img) => {
+    
+        img.addEventListener('mouseenter', () => {
+            img.style.cursor = 'pointer';
+            img.style.transition = 'transform 0.3s ease, filter 0.3s ease';
+            img.style.transform = 'scale(1.1)'; 
+            img.style.filter = 'brightness(1.2) drop-shadow(0 0 15px white)'; 
+        });
+
+        img.addEventListener('mouseleave', () => {
+            img.style.transform = 'scale(1)';
+            img.style.filter = 'none';
+        });
+
+        
+    });
+});
+
+imagenes.forEach(img => {
+    img.addEventListener('click', () => {
+        // Ejemplo: el Agujero Negro se "traga" la imagen (se encoge)
+        img.style.transition = "all 0.5s ease";
+        img.style.filter = "brightness(2) contrast(1.5)";
+        img.style.transform = "scale(0.8) rotate(10deg)";
+        
+        // Volver a la normalidad después de medio segundo
+        setTimeout(() => {
+            img.style.filter = "none";
+            img.style.transform = "scale(1) rotate(0deg)";
+        }, 500);
+    });
+});
 
 //Datos curiosos
 const datos = [
