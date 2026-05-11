@@ -143,9 +143,55 @@ a:hover {
 }
 
 
+/* El contenedor que aparece al darle a "Añadir" */
+#contenedor-input {
+    margin: 20px auto;
+    width: 20em; /* Mismo ancho que tu lista para que todo cuadre */
+    display: none; /* Se controla con JS */
+    gap: 10px;
+}
 
+/* El campo de texto */
+#nueva-tarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none; /* Quita el borde azul feo por defecto */
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Para que el padding no agrande el ancho */
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+#nueva-tarea:focus {
+    border-color: #2196f3; /* Cambia a azul al escribir */
+}
+
+/* El botón de guardar que acompaña al input */
+#btn-guardar {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Verde para indicar "acción positiva" */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btn-guardar:hover {
+    background-color: #45a049;
+}
 
 h1{
     text-align: center;
     padding: 50px;
+}
+
+#listas {
+    display: flex;
+    list-style-type: none;
 }
