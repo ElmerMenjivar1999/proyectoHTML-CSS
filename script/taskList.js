@@ -1,10 +1,24 @@
+//Modo oscuro
+const botonTema = document.querySelector("#botonTema");
+
+botonTema.addEventListener("click", function() {
+    // toggle añade la clase si no está, y la quita si ya está
+    document.body.classList.toggle("temaClaro");
+
+     if(document.body.classList.contains("temaClaro")){
+        botonTema.innerText="Modo Oscuro";
+    }else{
+        botonTema.innerText="Modo Claro";
+    }
+});
+
 const btnMostrar = document.querySelector('.append-list');
 const contenedorInput = document.getElementById('contenedor-input');
 const btnGuardar = document.getElementById('btn-guardar');
 const inputTarea = document.getElementById('nueva-tarea');
 const listaTareas = document.getElementById('lista-tareas');
 
-// 1. Mostrar el input al hacer clic
+// Mostrar el input al hacer clic
 btnMostrar.addEventListener('click', () => {
   contenedorInput.style.display = 'block'; // Mostramos el div
 });
@@ -22,19 +36,19 @@ btnGuardar.addEventListener('click', () => {
     listaTareas.appendChild(nuevaLi);
     
     const btnEliminar = document.createElement('button');
-    btnEliminar.textContent = "X"; // O puedes poner "Eliminar"
-    btnEliminar.classList.add('btn-borrar'); // Le damos una clase para darle estilo
+    btnEliminar.textContent = "X"; 
+    btnEliminar.classList.add('btn-borrar'); 
 
-    // 4. LA LÓGICA PARA ELIMINAR:
-    // Le decimos al botón: "Cuando te hagan click, borra a tu padre (el li)"
+    // Eliminar tarea
+
     btnEliminar.onclick = function() {
         nuevaLi.remove();
     };
 
-    // 5. Meter el botón dentro del li
+    //Meter el botón dentro del li
     nuevaLi.appendChild(btnEliminar);
 
-    // 6. Finalmente, meter todo el li en la lista ul
+    //Meter todo el li en la lista ul
     listaTareas.appendChild(nuevaLi);
 
     // Limpiar y ocultar de nuevo

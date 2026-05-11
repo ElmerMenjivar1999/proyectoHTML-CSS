@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+/* Estilos cuando la clase .temaOscuro está activa */
+body.temaClaro {
+    background-color: white;
+    color: black;
+}
+
+body.temaClaro a{
+    color: black;
+}
+
 body {
     background-color: #333030;
     color: white;
@@ -134,41 +144,47 @@ a:hover {
     background-color: #ff0000;
 }
 
+h1{
+    text-align: center;
+    padding: 50px;
+}
+
+
 #lista-tareas{
     list-style: none;
-    padding: 0;      /* Quitamos el padding para que no ocupe espacio vacío */
+    padding: 0;     
     width: 50em;
-    margin: 20px auto; /* Lo centramos horizontalmente */
+    margin: 20px auto; 
     
 }
 
 
-/* El contenedor que aparece al darle a "Añadir" */
+
 #contenedor-input {
     margin: 20px auto;
-    width: 20em; /* Mismo ancho que tu lista para que todo cuadre */
-    display: none; /* Se controla con JS */
+    width: 20em; 
+    display: none; 
     gap: 10px;
 }
 
-/* El campo de texto */
+
 #nueva-tarea {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #333;
     border-radius: 10px;
     font-size: 16px;
-    outline: none; /* Quita el borde azul feo por defecto */
+    outline: none; 
     transition: border-color 0.3s;
-    box-sizing: border-box; /* Para que el padding no agrande el ancho */
+    box-sizing: border-box; 
 }
 
-/* Efecto cuando el usuario hace clic para escribir */
+
 #nueva-tarea:focus {
-    border-color: #2196f3; /* Cambia a azul al escribir */
+    border-color: #2196f3; 
 }
 
-/* botón de guardar */
+
 #btn-guardar {
     margin-top: 10px;
     width: 100%;
@@ -186,12 +202,21 @@ a:hover {
     background-color: #45a049;
 }
 
-h1{
-    text-align: center;
-    padding: 50px;
-}
 
 #listas {
     display: flex;
     list-style-type: none;
+}
+
+#botonTema{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: #e35f50;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: 18px;
 }

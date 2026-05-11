@@ -1,4 +1,4 @@
-// 1. Pedimos el nombre al usuario con una ventana emergente
+//Pedimos el nombre al usuario con una ventana emergente
 window.onload = function() {
     const contenedor = document.getElementById('usuario-container');
     const display = document.getElementById('nombre-display');
@@ -57,7 +57,6 @@ document.addEventListener('mousemove', () => {
 
 imagenes.forEach(img => {
     img.addEventListener('click', () => {
-        // Ejemplo: el Agujero Negro se "traga" la imagen (se encoge)
         img.style.transition = "all 0.5s ease";
         img.style.filter = "brightness(2) contrast(1.5)";
         img.style.transform = "scale(0.8) rotate(10deg)";
@@ -101,11 +100,11 @@ botonesLike.forEach(boton => {
         // Ponemos o quitamos la clase del color rojo
         this.classList.toggle('corazon-activo');
         
-        // Cambiamos el símbolo para que parezca "relleno"
+        //Cambiamos el símbolo.
         if (this.classList.contains('corazon-activo')) {
-            this.innerText = "❤️"; // Corazón lleno
+            this.innerText = "❤️"; 
         } else {
-            this.innerText = "♡"; // Corazón vacío original
+            this.innerText = "♡"; 
         }
     });
 });
@@ -117,16 +116,26 @@ document.getElementById('btn-suscribir').addEventListener('click', function(e) {
     e.preventDefault();
     if (email.includes('@') && email.includes('.')) {
         // Si es correcto
-
         mensaje.innerText = "¡Preparando el despegue! Revisa tu bandeja de entrada en " + email;
         mensaje.style.color = "#00ffcc"; 
         emailInput.value = ""; 
-        
-        //this.disabled = true;
 
     } else {
         mensaje.innerText = "Error en la trayectoria. Introduce un email válido.";
-        mensaje.style.color = "#ff4d4d"; // Rojo alerta
+        mensaje.style.color = "#ff4d4d"; 
     }
 });
 
+//Modo oscuro
+const botonTema = document.querySelector("#botonTema");
+
+botonTema.addEventListener("click", function() {
+    // toggle añade la clase si no está, y la quita si ya está
+    document.body.classList.toggle("temaClaro");
+
+    if(document.body.classList.contains("temaClaro")){
+        botonTema.innerText="Modo Oscuro";
+    }else{
+        botonTema.innerText="Modo Claro";
+    }
+});
